@@ -116,6 +116,7 @@ a:hover,
     color: #fff;
     height: 135px;
     position: relative;
+    overflow: hidden;
 }
 
 #header-container, #header-banner {
@@ -318,7 +319,8 @@ body {
     font-size: 9pt;
 }
 
-.link .flat-list li a {
+.link .flat-list li a
+.comment .flat-list li a {
     padding: 0px 4px;
     color: #777;
     font-weight: 600;
@@ -445,7 +447,7 @@ a.author {
 /*---
 ----- Comments ---*/
 
-form[action="https://voat.co/submitcomment"] {
+form[action$="/submitcomment"] {
     margin-left: 15px;
 }
 
@@ -626,4 +628,31 @@ ul.content li a.author {
 
 .footer:after {
     content: "FLATRON theme by /u/Shiny | /v/Flatron"
+}
+
+/*---
+----- Misc ---*/
+
+.content.error-page {
+    margin: 0;
+}
+
+.error-page .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.error-page .panel .panel-heading {
+    background: #eee;
+    border: 0;
+    height: 36px;
+}
+
+.error-page .panel-title {
+    font-size: 11pt;
+}
+
+.error-page .panel {
+    margin: 0;
 }
