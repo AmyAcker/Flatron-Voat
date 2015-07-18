@@ -395,6 +395,20 @@ a.author {
     text-decoration: none;
 }
 
+.link-expando-type {
+    font-size: 6pt;
+    border: 0;
+    border-radius: 0;
+    padding: 2px 4px;
+    background: #eee;
+    line-height: 10pt;
+    color: #777;
+}
+
+a:hover .link-expando-type {
+    background: rgba(93, 202, 255, .0);
+}
+
 .md h1 {
     border-bottom: 1px dotted #eee;
     font-size: 16pt;
@@ -632,6 +646,12 @@ ul.content li a.author {
 
 /*---
 ----- Misc ---*/
+
+.alert-featuredsub {
+    margin: 0;
+    padding: 0;
+    border-bottom-width: 4px;
+}
 
 .content.error-page {
     margin: 0;
