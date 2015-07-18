@@ -56,6 +56,11 @@ body,
     font-family: "Open Sans", "Segoe UI", sans-serif; /* TODO*: Find replacement for Segoe UI */
 }
 
+body {
+    font-size: 9pt;
+    color: #555;
+}
+
 .link a.title.may-blank {
     color: #111;
     font-weight: 300;
@@ -518,6 +523,21 @@ form[action="https://voat.co/submitcomment"] {
 .titlebox .bottom {
     font-size: 8pt;
     border-top: 1px dotted #eee;
+}
+
+.side .spacer > .sidecontentbox {
+    padding: 15px;
+    background: #eee;
+}
+
+.sidecontentbox > .content {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+ul.content li a.author {
+    font-size: 10pt;
 }
 
 /*---
