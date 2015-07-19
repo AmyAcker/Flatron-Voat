@@ -424,9 +424,22 @@ body {
 /*---
 ----- Submission ---*/
 
-a.author {
-    font-weight: 400;
+a.author,
+a.author:visited,
+.link a.author,
+.link a.author:visited,
+.comment a.author,
+.comment a.author:visited {
+    color: #2C7FA7;
+    font-weight: 600;
     letter-spacing: .5px;
+}
+
+a.author:hover,
+.link a.author:hover,
+.comment a.author:hover {
+    text-decoration: none;
+    color: #044362;
 }
 
 .link:first-of-type:hover {
@@ -784,6 +797,21 @@ body.dark {
     color: #aaa;
 }
 
+.dark a.author,
+.dark a.author:visited,
+.dark .link a.author,
+.dark .link a.author:visited,
+.dark .comment a.author,
+.dark .comment a.author:visited {
+    color: #086FA1;
+}
+
+.dark a.author:hover,
+.dark .link a.author:hover,
+.dark .comment a.author:hover {
+    color: #4D96B9;
+}
+
 .dark .link:hover,
 .dark .link.stickied:first-of-type:hover {
     background-color: #3e3e3e;
@@ -802,8 +830,12 @@ body.dark {
 }
 
 .dark .tagline,
-.link a.subverse {
+.dark .link a.subverse {
     color: #aaa;
+}
+
+.dark .link a.subverse:hover {
+    color: #4D96B9;
 }
 
 .dark .link .flat-list li a {
