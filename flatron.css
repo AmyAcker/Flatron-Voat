@@ -35,19 +35,17 @@
 .link .title,
 .alert-h1,
 .alert-h2,
-h1,
-h2,
-h3,
-h4,
+h1, h2, h3, h4,
 .btn-whoaverse,
 .btn-whoaverse-paging,
 .pagename,
 .tabmenu,
 .whoaversename.hover,
 a.author,
+.pagination-container + a[href="/random"],
 .footer
 {
-    font-family: "Raleway", "Segoe UI Light", sans-serif;
+    font-family: "Raleway", "Segoe UI", sans-serif;
     font-weight: 300;
 }
 
@@ -58,6 +56,7 @@ body,
 
 body {
     font-size: 9pt;
+    line-height: 1.6;
     color: #555;
 }
 
@@ -293,6 +292,8 @@ body {
 
 .link {
     border: 0;
+    padding: 15px 0;
+    padding-right: 15px;
 }
 
 .link.stickied { background: #eee; }
@@ -323,6 +324,31 @@ body {
 
 .link .entry {
     margin: 0;
+}
+
+.link .title {
+    padding: 0;
+}
+
+.promoted {
+    border: 0px none;
+    border-radius: 0px;
+    padding: 6px 8px;
+    line-height: 100%;
+    vertical-align: middle;
+    min-width: 0;
+    background: none;
+    color: #fff;
+    font-size: 10pt;
+    display: inline;
+    letter-spacing: 0;
+    background: #A26DF9;
+    float: right;
+}
+
+.thumbnail {
+    border-radius: 0;
+    transition: 150ms ease-out all;
 }
 
 .link .tagline {
@@ -358,6 +384,7 @@ body {
 
 .pagination-container {
     max-height: 50px;
+    display: inline-block;
 }
 
 .pagination-container .btn-whoaverse-paging {
@@ -380,6 +407,19 @@ body {
 }
 
 .pagination-container .btn-whoaverse-paging a:hover:before { background-color: #f7f7f7; }
+
+.pagination-container + a[href="/random"] {
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 12pt;
+}
+
+.pagination-container + a[href="/random"]:hover {
+    background: #f7f7f7;
+}
 
 /*---
 ----- Submission ---*/
@@ -496,6 +536,11 @@ form[action$="/submitcomment"] {
 /*---
 ----- Sidebar ---*/
 
+.side .spacer.spacersection,
+.link {
+    min-height: 105px;
+}
+
 .side {
     margin: 0;
     padding: 0;
@@ -510,6 +555,7 @@ form[action$="/submitcomment"] {
     margin-top: 0;
     padding: 15px;
     border: 0;
+    border-radius: 0;
     background: #f7f7f7;
 }
 
@@ -561,9 +607,10 @@ form[action$="/submitcomment"] {
     border-top: 1px dotted #eee;
 }
 
-.side .spacer > .sidecontentbox {
-    padding: 15px;
-    background: #eee;
+.side .spacer > .sidecontentbox .content {
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .sidecontentbox > .content {
@@ -596,6 +643,7 @@ ul.content li a.author {
 .btn-whoaverse-paging:hover {
     color: #000;
     background: transparent;
+    box-shadow: none;
 }
 
 .btn-whoaverse:active,
@@ -695,4 +743,116 @@ ul.content li a.author {
 
 .error-page .panel {
     margin: 0;
+}
+
+/*---
+----- Dark Mode ---*/
+
+.dark a,
+.dark a.visited {
+    color: #fff;
+}
+
+.dark a:hover,
+.dark .titlebox h1 a:hover {
+    color: #2C7FA7;
+}
+
+.dark #header {
+    background-color: #022C41;    
+}
+
+.dark .tabmenu {
+    background-color: #022232;
+}
+
+.dark .tabmenu li a.contribute.submit-link,
+.dark .tabmenu li a.contribute.submit-link:hover {
+    border-color: rgba(100, 100, 100, 0.3);
+}
+
+.tabmenu li.disabled a:active {
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+.dark #header-account {
+    background-color: #031D29;
+}
+
+body.dark {
+    background-color: #333;
+    color: #aaa;
+}
+
+.dark .link:hover,
+.dark .link.stickied:first-of-type:hover {
+    background-color: #3e3e3e;
+}
+
+.dark .link.stickied {
+    background-color: #444;
+}
+
+.dark .promoted {
+    background-color: #380144;
+}
+
+.dark .link a.title.may-blank {
+    color: #eee;
+}
+
+.dark .tagline,
+.link a.subverse {
+    color: #aaa;
+}
+
+.dark .link .flat-list li a {
+    color: #777;
+}
+
+.dark .pagination-container .btn-whoaverse-paging {
+    background-color: transparent;
+}
+
+.dark .pagination-container .btn-whoaverse-paging a:hover:before {
+    background-color: #3e3e3e;
+}
+
+.dark .side .spacer.spacersection,
+.dark .side .spacer:first-of-type {
+    background-color: #3e3e3e;
+}
+
+.dark .btn-whoaverse.contribute,
+.dark .btn-sub {
+    background-color: #022C41;
+}
+
+.dark .btn-whoaverse.contribute:hover,
+.dark .btn-sub:hover {
+    background-color: #044362;
+}
+
+.dark .btn-whoaverse,
+.dark .btn-whoaverse-paging {
+    background-color: #222;
+    color: #999;
+}
+
+.dark .btn-whoaverse:hover,
+.dark .btn-whoaverse-paging:hover {
+    background-color: transparent;
+}
+
+.dark .alert-h1,
+.dark .alert-h2 {
+    color: #086FA1;
+}
+
+.dark .titlebox .bottom {
+    border-color: #444;
+}
+
+.dark .footer-container {
+    background-color: #111;
 }
