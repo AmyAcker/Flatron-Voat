@@ -594,7 +594,7 @@ a.author:hover,
     border-radius: 0;
     padding: 2px 4px;
     background: #eee;
-    line-height: 10.5pt;
+    line-height: 9pt;
     color: #777;
     transition: 150ms all ease-out;
 }
