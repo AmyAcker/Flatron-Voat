@@ -21,3 +21,7 @@ Milestones:
 2. Mobile-friendly. - Current focus
 3. Make a custom spritesheet.
 4. Custom Voat logo.
+
+##Mobile TODO
+
+1. Fix the tabmenu.
