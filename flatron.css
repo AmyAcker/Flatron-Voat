@@ -365,8 +365,8 @@ body {
 }
 
 .link .score {
-    color: #555;
-    font-weight: 300;
+    color: #888;
+    font-weight: 400;
 }
 
 .link .entry {
@@ -517,6 +517,10 @@ a.author:hover,
     text-decoration: none;
 }
 
+.gray {
+    color: #aaa;
+}
+
 .link-expando-type {
     font-size: 6pt;
     border: 0;
@@ -599,8 +603,8 @@ form[action$="submitcomment"] {
 /*---
 ----- Sidebar ---*/
 
-.side .spacer.spacersection,
-.link {
+.side .spacer:first-of-type,
+.link:first-of-type {
     min-height: 105px;
 }
 
@@ -899,6 +903,10 @@ body.dark {
 
 .dark .link .flat-list li a:active {
     background-color: #3e3e3e;
+}
+
+.dark .gray {
+    color: #555;
 }
 
 .dark .md a {
