@@ -50,6 +50,67 @@ html {
     color: #aaa;
 }
 
+.side input[type="checkbox"] + label { display: none; }
+  
+.side form[action*="search"] {
+    position: relative;
+}
+  
+.side input[type="checkbox"] {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}
+
+.side form[action*="search"]::after {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    min-width: 185px;
+    padding: 10px;
+    content: "Limit search results to subverse";
+    display: inline-block;
+    opacity: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    top: -9999px;
+}
+  
+.side form[action*="search"]:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #ccc;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 15px;
+    right: 11px;
+    z-index: 5;
+    animation: fadetooltip 150ms cubic-bezier(0, 0, 0, .9);
+}
+
+.side form[action*="search"]:hover::after {
+    z-index: 4;
+    top: 25px;
+    right: 0px;
+    opacity: 1;
+    animation: fadetooltip 150ms cubic-bezier(0, 0, 0, .9);
+}
+  
+@keyframes fadetooltip {
+	0% {
+		transform: translateX(20px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
 /*---
 ----- Typography ---*/
 
@@ -140,7 +201,8 @@ a:hover,
 #sr-header-area:hover #sr-bar li a,
 #sr-bar li a,
 .sr-list li a,
-#sr-header-area .selected a {
+#sr-header-area .selected a,
+.drop-arrow {
     color: #fff;
 }
 
@@ -163,6 +225,10 @@ a:hover,
     height: 135px;
     position: relative;
     max-width: 100vw;
+}
+
+#header:focus{
+    outline:0;
 }
 
 .whoaSubscriptionMenu li ul {
@@ -590,6 +656,10 @@ a:hover .link-expando-type {
 
 form[action$="submitcomment"] {
     margin: 0 15px;
+}
+
+.comment {
+    padding-right: 100px;
 }
 
 .comment .comment {
