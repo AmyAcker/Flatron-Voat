@@ -1,6 +1,6 @@
 #FLATRON - A Voat theme
 
-![FLATRON Screenshot](https://github.com/Gyyyn/Flatron-Voat/master/screenshot.png)
+![FLATRON Screenshot](https://raw.githubusercontent.com/Gyyyn/Flatron-Voat/master/screenshot.png)
 
 ## License
 
