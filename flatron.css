@@ -201,9 +201,12 @@ a:hover,
 #sr-header-area:hover #sr-bar li a,
 #sr-bar li a,
 .sr-list li a,
-#sr-header-area .selected a,
-.drop-arrow {
+#sr-header-area .selected a {
     color: #fff;
+}
+
+.drop-arrow {
+    border-color: #fff transparent transparent;
 }
 
 #header-account a {
@@ -1135,7 +1138,8 @@ body.dark {
     }
     
     .link .flat-list.buttons li a,
-    .comment .flat-list.buttons li a {
+    .comment .flat-list.buttons li a,
+    .inline-loadcomments-btn {
         border: 0;
         border-radius: 0;
         background: #e4e4e4;
@@ -1147,18 +1151,23 @@ body.dark {
     }
     
     .link .flat-list.buttons li a:hover,
-    .comment .flat-list.buttons li a:hover {
+    .comment .flat-list.buttons li a:hover,
+    .inline-loadcomments-btn:hover {
         background: #eee;
     }
     
     .link .flat-list.buttons li a:active,
-    .comment .flat-list.buttons li a:active {
+    .comment .flat-list.buttons li a:active,
+    .inline-loadcomments-btn:active {
         transition: 70ms ease-out all;
         background: transparent;
     }
     
+    .inline-loadcomments-btn,
     .comment .flat-list.buttons li a {
-         padding: 2px 8px;   
+        display: inline;
+        padding: 2px 6px;
+        font-size: 8pt;
     }
     
     .link .flat-list li.first a {
@@ -1195,10 +1204,11 @@ body.dark {
         top: 0;
         animation: none;
         transition: 300ms all cubic-bezier(0, 0, 0, .9);
+        width: calc(100vw - 20px);
     }
     
     .side.show-mobile-sidebar {
-        left: -10px;
+        left: 0px;
         top: 0px;
         opacity: 1;
     }
@@ -1229,8 +1239,14 @@ body.dark {
     }
     
     /* Comments */
+    
+    .commentarea{
+        padding: 15px;
+    }
+    
     .comment {
-    	margin: 0;
+    	margin: 10px 0;
+        padding: 0;
     }
     
     .comment .midcol,
@@ -1239,7 +1255,7 @@ body.dark {
     }
     
     .comment .comment {
-        margin: 0;
+        margin: 5px;
         padding: 6px;
         border-width: 3px;
     }
