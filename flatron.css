@@ -351,6 +351,7 @@ a:hover,
     display: block;
     background: #00A1EF;
     width: 95vw;
+    max-height: 36px;
 }
 
 .tabmenu li {
@@ -405,7 +406,7 @@ a:hover,
     width: 300px;
     text-align: center;
     background: #0091D7;
-    max-height: 37px;
+    max-height: 36px;
     text-transform: uppercase;
     overflow: hidden;
 }
@@ -515,6 +516,14 @@ body {
     letter-spacing: 0;
     background: #A26DF9;
     float: right;
+}
+
+.flair,
+.linkflairlabel {
+    background: #eee;
+    color: #777;
+    border-radius: 0;
+    border: 0;
 }
 
 .thumbnail {
@@ -630,7 +639,8 @@ a.author:hover,
     border-radius: 0;
 }
 
-.md a {
+.md a,
+.md a:visited {
     color: #555;
     border-bottom: 2px solid #AEE4FF;
     box-shadow: 0px -2px 0px #AEE4FF inset;
@@ -1075,6 +1085,12 @@ body.dark {
     background-color: #380144;
 }
 
+.dark .flair,
+.dark .linkflairlabel {
+    background: #3e3e3e;
+    color: #777;
+}
+
 .dark .link a.title.may-blank {
     color: #eee;
 }
@@ -1104,7 +1120,8 @@ body.dark {
     color: #555;
 }
 
-.dark .md a {
+.dark .md a,
+.dark .md a:visited {
     color: #aaa;
     border-bottom-color: rgba(55, 66, 72, 1);
     box-shadow: 0px -2px 0px rgba(55, 66, 72, 1) inset;
@@ -1113,6 +1130,14 @@ body.dark {
 .dark .md a:hover {
     background-color: rgba(55, 66, 72, .1);
     color: #2C7FA7 !important;
+}
+
+.dark .md h1 {
+    border-color: #444;
+}
+
+.dark .md hr {
+    border-color: #444;
 }
 
 .dark .link-expando-type {
@@ -1279,9 +1304,9 @@ body.dark {
         transition: 150ms cubic-bezier(0, 0, 0, .9) all;
     }
 
-    .link .flat-list.buttons li a,
-    .comment .flat-list.buttons li a,
-    .inline-loadcomments-btn {
+    .dark .link .flat-list.buttons li a,
+    .dark .comment .flat-list.buttons li a,
+    .dark .inline-loadcomments-btn {
         background: #444;
         color: #aaa;
     }
@@ -1292,9 +1317,9 @@ body.dark {
         background: #eee;
     }
 
-    .link .flat-list.buttons li a:hover,
-    .comment .flat-list.buttons li a:hover,
-    .inline-loadcomments-btn:hover {
+    .dark .link .flat-list.buttons li a:hover,
+    .dark .comment .flat-list.buttons li a:hover,
+    .dark .inline-loadcomments-btn:hover {
         background: #4e4e4e;
     }
 
