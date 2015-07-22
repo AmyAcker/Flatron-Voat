@@ -1165,7 +1165,7 @@ body.dark {
 .dark .side .spacer.spacersection,
 .dark .side .spacer:not(.spacersection) > .sidecontentbox,
 .dark .side .spacer:first-of-type {
-    background-color: #3e3e3e;
+    background-color: #444;
 }
 
 .dark .titlebox {
