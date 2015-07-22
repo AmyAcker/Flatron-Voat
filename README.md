@@ -20,4 +20,4 @@ Milestones:
 1. Dark mode. - DONE
 2. Mobile-friendly. - DONE
 3. Make a custom spritesheet. - DONE
-4. Custom Voat logo. - Current focus
+4. Custom Voat logo. - DONE
