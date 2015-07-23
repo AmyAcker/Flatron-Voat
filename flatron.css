@@ -120,6 +120,27 @@ html {
 	}
 }
 
+.alert-firsttimevisitorwelcome {
+    background-color: #eaeaea;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: #555;
+    font-size: 12px;
+    margin: 0;
+    padding-left: 50px;
+}
+
+.label {
+    border-radius: 0;
+    background: #eee;
+    font-weight: 600;
+}
+
+.dark .label {
+    background: #3e3e3e;
+}
+
 /* TODO: FIX THIS
 .side .titlebox .md h3 {
     position: absolute;
@@ -178,6 +199,10 @@ body {
 .link a.title.may-blank {
     color: #111;
     font-weight: 300;
+}
+
+.link a.title.may-blank:visited {
+    color: #49005D;
 }
 
 .link a.title.may-blank:hover  {
@@ -270,6 +295,7 @@ a:hover,
     z-index: 1000;
 }
 
+.whoaSubscriptionMenu li ul li a,
 .whoaSubscriptionMenu li ul li a:link {
     padding: 4px 8px;
     font-size: 8pt;
@@ -453,6 +479,12 @@ body {
 .content {
     margin-left: 0;
     margin-right: 300px;
+}
+
+#sortingThingy {
+    padding: 8px;
+    padding-left: 50px;
+    background: #eaeaea;
 }
 
 /*---
@@ -695,7 +727,8 @@ a:hover .link-expando-type {
     content: " "close-quote;
 }
 
-.md blockquote {
+.md blockquote,
+.dark .md blockquote {
     margin: 15px;
     border: 1px #eee solid;
     box-shadow: none;
@@ -791,6 +824,7 @@ form[action$="submitcomment"] {
 
 .commentarea {
     padding-left: 15px;
+    margin-bottom: 15px;
 }
 
 .comment {
@@ -1035,6 +1069,17 @@ ul.content li a.author {
     background-color: #022C41;
 }
 
+.dark .whoaSubscriptionMenu li ul li a,
+.dark .whoaSubscriptionMenu li ul li a:link {
+    color: #aaa;
+    background: #222;
+}
+
+.dark .whoaSubscriptionMenu li ul li a:hover {
+    background: #3e3e3e;
+    color: #aaa !important;
+}
+
 .dark .tabmenu {
     background-color: #022232;
 }
@@ -1091,7 +1136,8 @@ body.dark {
     color: #777;
 }
 
-.dark .link a.title.may-blank {
+.dark .link a.title.may-blank,
+.dark .link a.title.may-blank:visited {
     color: #eee;
 }
 
@@ -1145,8 +1191,14 @@ body.dark {
 }
 
 .dark .md pre,
+.link .usertext .md pre,
 .dark .md code {
     background-color: #3e3e3e;
+    border-color: #4e4e4e;
+}
+
+.dark .md blockquote {
+    background-color: #3e3e3e !important;
     border-color: #4e4e4e;
 }
 
